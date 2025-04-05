@@ -1,11 +1,14 @@
+
 # Week 01 – Caesar Cipher
 
 ## 🔐 Topic Summary:
-This week I learned about the **Caesar Cipher**, one of the earliest and simplest encryption techniques.
+This week I learned about the **Caesar Cipher**, one of the earliest and most basic encryption techniques.
 
-It works by shifting each letter of the plaintext by a fixed number of positions in the alphabet. For example, a shift of +3 means A becomes D, B becomes E, etc.
+The Caesar Cipher works by **shifting each letter in the plaintext by a fixed number of positions** in the alphabet. For example, a shift of +3 transforms A into D, B into E, and so on.
 
-This cipher is **monoalphabetic** and **symmetric**, meaning the same key (shift value) is used for both encryption and decryption. It’s simple but not secure by today’s standards.
+It is a **monoalphabetic substitution cipher** and **symmetric**, meaning the same key is used for both encryption and decryption.
+
+While it's easy to implement and understand, it offers **very weak security** and is not used in real-world systems.
 
 ---
 
@@ -17,13 +20,13 @@ This cipher is **monoalphabetic** and **symmetric**, meaning the same key (shift
 - **Shift**: +3  
 - **Ciphertext**: KHOOR
 
-**How it works:**
+**Step-by-step shift:**
 
 | Plaintext | H | E | L | L | O |
 |-----------|---|---|---|---|---|
-| Shift +3  | K | H | O | O | R |
+| +3 Shift  | K | H | O | O | R |
 
-So, “HELLO” becomes **KHOOR** when encrypted with a Caesar shift of 3.
+So, using Caesar Cipher with a shift of 3, the word **HELLO** becomes **KHOOR**.
 
 ---
 
@@ -41,26 +44,24 @@ def caesar_encrypt(text, shift):
     return result
 
 print(caesar_encrypt("HELLO", 3))  # Output: KHOOR
-This code encrypts any string by shifting each letter by the value of shift. It handles both uppercase and lowercase characters, and skips non-alphabetic ones.
-
 ⚔️ Possible Attacks
-The Caesar Cipher is very weak and can be broken easily using:
+The Caesar Cipher is not secure and can be easily broken using:
 
-Brute Force: Try all 25 possible shifts (only 26 letters in the alphabet)
+Brute Force Attack: Try all 25 possible shifts (since there are only 26 letters).
 
-Frequency Analysis: Analyze which letters appear most often to guess the plaintext (e.g., E, T, A in English)
+Frequency Analysis: Common letters in English (like E, T, A) make it easy to guess the plaintext.
 
-It offers no real security in the modern world.
+For this reason, Caesar Cipher is considered insecure today and is mainly used for educational purposes.
 
 🔁 Comparison Table
 Cipher	Type	Key Size	Security Level	Attack Resistance
 Caesar Cipher	Monoalphabetic	1 number	Very Weak	Brute-force, frequency
 💡 Reflection
-I found Caesar Cipher very easy to understand and implement. It helped me grasp the basic idea of symmetric encryption and how alphabet shifting works in ciphers.
+This week helped me understand the basic principles of symmetric encryption. I enjoyed manually solving and writing the Caesar cipher in Python.
 
-However, I also realized how outdated it is — since even someone with basic knowledge could break it in seconds using brute-force or frequency analysis.
+At first, it seemed like a clever way to hide messages, but I quickly realized how vulnerable it is. The fact that it can be broken in seconds using brute-force or frequency analysis shows how important stronger encryption is in modern systems.
 
-It was a great introduction to classical encryption, but not suitable for securing real-world data.
+This was a great introduction to cryptography and helped me appreciate why key management and randomness are important for security.
 
 🔗 Resources Consulted
 Crypto101 – Caesar Cipher
