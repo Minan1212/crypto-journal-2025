@@ -41,22 +41,26 @@ def caesar_encrypt(text, shift):
     return result
 
 print(caesar_encrypt("HELLO", 3))  # Output: KHOOR
-
 ⚔️ Possible Attacks
 The Caesar Cipher is very weak and can be broken easily using:
 
 Brute Force: Try all 25 possible shifts (only 26 letters in the alphabet)
 
-Frequency Analysis: Analyze which letters appear most often to guess the plaintext (e.g. E, T, A in English)
+Frequency Analysis: Analyze which letters appear most often to guess the plaintext (e.g., E, T, A in English)
 
 🔁 Comparison Table
 Cipher	Type	Key Size	Security Level	Attack Resistance
-Caesar Cipher	Monoalphabetic	1 number	Very Weak	Brute force, frequency
-
-frequency
+Caesar Cipher	Monoalphabetic	1 number	Very Weak	Brute-force, frequency
 💡 Reflection
 I found Caesar Cipher very easy to understand and implement. It helped me grasp the idea of symmetric encryption and alphabet shifting.
 
 However, I also realized how outdated it is — since even someone with basic knowledge could break it in seconds.
 
-It was a great introduction to classical encryption, but not suitable for securing real-world data
+It was a great introduction to classical encryption, but not suitable for securing real-world data.
+
+🔗 Resources Consulted
+Crypto101 – Caesar Cipher
+
+YouTube – Caesar Cipher Explained
+
+Wikipedia – Caesar Cipher
