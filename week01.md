@@ -64,4 +64,11 @@ At first, it seemed like a clever way to hide messages, but I quickly realized h
 
 This was a great introduction to cryptography and helped me appreciate why key management and randomness are important for security.
 
+🔗 Resources Consulted
+Crypto101 – Caesar Cipher
+
+YouTube – Caesar Cipher Explained
+
+Wikipedia – Caesar Cipher
+
 
