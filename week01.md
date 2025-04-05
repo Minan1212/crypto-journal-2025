@@ -1,4 +1,3 @@
-
 # Week 01 – Caesar Cipher
 
 ## 🔐 Topic Summary:
@@ -44,6 +43,8 @@ def caesar_encrypt(text, shift):
     return result
 
 print(caesar_encrypt("HELLO", 3))  # Output: KHOOR
+This code encrypts the text by shifting each letter by the given number (in this case, 3). It works with both uppercase and lowercase letters and skips non-alphabetic characters.
+
 ⚔️ Possible Attacks
 The Caesar Cipher is not secure and can be easily broken using:
 
