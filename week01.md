@@ -1,14 +1,33 @@
 # Week 01 – Caesar Cipher
 
 ## 🔐 Topic Summary:
-Learned about Caesar Cipher, which shifts each letter by a fixed value. It was one of the earliest known ciphers and represents basic principles of symmetric encryption.
+This week I learned about the **Caesar Cipher**, one of the earliest and simplest encryption techniques.
 
-## ✍️ Manual Calculation:
-Plaintext: HELLO  
-Shift: +3  
-Ciphertext: KHOOR
+It works by shifting each letter of the plaintext by a fixed number of positions in the alphabet. For example, a shift of +3 means A becomes D, B becomes E, etc.
 
-## 💻 Python Code:
+This cipher is **monoalphabetic** and **symmetric**, meaning the same key (shift value) is used for both encryption and decryption.
+
+---
+
+## ✍️ Manual Calculation
+
+### Example:
+
+- **Plaintext**: HELLO  
+- **Shift**: +3  
+- **Ciphertext**: KHOOR
+
+**How it works:**
+
+| Plaintext | H | E | L | L | O |
+|-----------|---|---|---|---|---|
+| Shift +3  | K | H | O | O | R |
+
+So, “HELLO” becomes **KHOOR** when encrypted with a Caesar shift of 3.
+
+---
+
+## 💻 Python Code – Caesar Cipher
 
 ```python
 def caesar_encrypt(text, shift):
@@ -21,19 +40,23 @@ def caesar_encrypt(text, shift):
             result += char
     return result
 
-print(caesar_encrypt("HELLO", 3))
- Possible Attacks:
-Brute-force: Try all 25 shifts
+print(caesar_encrypt("HELLO", 3))  # Output: KHOOR
 
-Frequency analysis: Match common letters
+⚔️ Possible Attacks
+The Caesar Cipher is very weak and can be broken easily using:
 
-🔁 Comparison:
-Cipher	Type	Strength
-Caesar	Monoalphabetic	Weak
-💡 Reflection:
-I learned Caesar is very weak today and can be broken easily using simple methods.
+Brute Force: Try all 25 possible shifts (only 26 letters in the alphabet)
 
-🔗 Resources:
-https://crypto101.io
+Frequency Analysis: Analyze which letters appear most often to guess the plaintext (e.g. E, T, A in English)
 
-https://www.youtube.com/watch?v=sMOZf4GN3oc
+🔁 Comparison Table
+Cipher	Type	Key Size	Security Level	Attack Resistance
+Caesar Cipher	Monoalphabetic	1 number	Very Weak	Brute force, frequency
+
+frequency
+💡 Reflection
+I found Caesar Cipher very easy to understand and implement. It helped me grasp the idea of symmetric encryption and alphabet shifting.
+
+However, I also realized how outdated it is — since even someone with basic knowledge could break it in seconds.
+
+It was a great introduction to classical encryption, but not suitable for securing real-world data
